@@ -19,9 +19,10 @@ function calc() {
     var result = 0;
 
     for (var input of quantities) {
-        if (input.value > 0) {
-            var value = prods[input.id - 1].price * parseFloat(input.value);
+        if (input.value == 0) {
+            continue;
         }
+        var value = prods[input.id - 1].price * parseFloat(input.value);
     }
 
     if (value > 0) {
